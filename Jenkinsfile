@@ -73,7 +73,7 @@ def underscore = '_'
              steps{
                  script{
                      try{
-                         withCredentials([usernamePassword(credentialsId: 'mkl88', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
+                         withCredentials([usernamePassword(credentialsId: 'docker-cred-id', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
                                 sh "docker login -u=${DOCKER_USERNAME} -p=${DOCKER_PASSWORD}"
                                 sh "docker tag $module$colons$BuildVersion $dev_rep_docker$colons$module$underscore$BuildVersion"
                                 sh "docker push $dev_rep_docker$colons$module$underscore$BuildVersion"
