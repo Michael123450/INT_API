@@ -1,5 +1,5 @@
 //@Library('Utilities') _
-import .groovy.json.JsonSlurper
+import json.JsonSlurper
 import hudson.model.*
 def BuildVersion
 def Current_version
