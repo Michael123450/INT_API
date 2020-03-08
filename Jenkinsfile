@@ -88,21 +88,6 @@ def underscore = '_'
                  }
              }
          }
-         //stage('Triggering E2E-CI job'){
-            
-                 //steps{
-                     //script{
-                         //node('master'){
-                             //build job: 'E2E-CI', parameters: [ string(name: 'triggered_by', value: module), string(name:'next_version', value: NextVersion), string(name: 'Image_version', value:  dev_rep_docker + colons + module + underscore + BuildVersion)]
-                            
-                         }
-
-
-                     }
-             }
-
-         }
-
      }
  }
 def Return_Json_From_File(file_name){
